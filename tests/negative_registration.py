@@ -5,7 +5,7 @@ from selenium.webdriver.support.wait import WebDriverWait
 from methods.methods_for_tests import Methods
 
 
-def test_check_positive_registration_succes():
+def test_check__negative_registration_error_true():
     method = Methods() #создаем объект класса
 
     driver = webdriver.Chrome(executable_path='/Users/sergeibiryukov/yandex/Sprint_3/chromedriver')
@@ -18,10 +18,11 @@ def test_check_positive_registration_succes():
     login = Methods.get_login(method)#передаем в переменную метод генерации Логина(email)
     print(f"Login {login}")#проверяем, что метод сработал, напечатав логин
     driver.find_element(*TestLocators.EMAIL_LINE).send_keys(login)#вводим в строку email наши данные
-    password = Methods.get_password(method)#передаем в переменную метод генерации Пароля
-    print(f"Password {password}")#проверяем, что метод сработал, напечатав пароль
+    password = Methods.get_password_false(method)#передаем в переменную метод генерации некорректного Пароля
+    print(f"Password {password}")#проверяем, что метод сработал, напечатав некорректный по длине пароль
     driver.find_element(*TestLocators.PASSWORD_LINE).send_keys(password)#вводим в строку пароля наши данные
     driver.find_element(*TestLocators.BUTTON_REG).click()#находим кнопку регистрации
-    assert len(TestLocators.FORM) == 2#проверяем элемент
+    error = driver.find_element(*TestLocators.ERROR_MESSAGE) # находим сообщение об ошибке
+    assert error.text == "Некорректный пароль"#проверяем, что текст ошибки равен указанному
 
     driver.quit()#Закрываем

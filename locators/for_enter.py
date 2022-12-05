@@ -15,5 +15,8 @@ class TestLocators:
     ENTER_FROM_REGISTRATION_BUTTON = By.XPATH, './/a[@class="Auth_link__1fOlj"]'  # Кнопка Войти из восстановления пароля
     STELLAR_BURGER_ELEMENT = By.XPATH, "//div[@class='AppHeader_header__logo__2D0X2']//a//*[name()='svg']" # Текст кнопка для перехода в конструктор
     CONSTRUCT_BURGER_TEXT = By.XPATH, '//h1[@class="text text_type_main-large mb-5 mt-10"]' # Текст в конструкторе
-    EXIT_BUTTON = By.XPATH, '//button[@type="button" and text()="Выход"]'# кнопка Выход
+    EXIT_BUTTON = By.XPATH, '//button[@type="button" and text()="Выход"]'# кнопка Выход в кабинете
     ENTER_TEXT = By.XPATH, './/h2[text()="Вход"]' #Надпись Вход
+    DISPLAY_BUTTON_BREAD = By.XPATH, "//span[contains(text(),'Булки')]"# кнопка Булки в конструкторе
+    DISPLAY_BUTTON_SAUCE = By.XPATH, "//span[contains(text(),'Соусы')]"# кнопка Соусы в конструкторе
+    DISPLAY_BUTTON_TOPPINGS = By.XPATH, "//span[contains(text(),'Начинки')]"# кнопка Начинки в конструкторе

@@ -6,7 +6,7 @@ LIST_FOR_LOGIN_PASSWORD = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j',
                            'w', 'x', 'y', 'z', 1, 2, 3, 4, 5, 6, 7, 8, 9, 0]
 
 
-class Methods:
+class CreatingData:
 
     """Метод для генерации пароля"""
     def get_password(self):

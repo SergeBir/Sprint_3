@@ -4,6 +4,7 @@ from pages.CreatingData import CreatingData
 """Тесты на проверку регситрации с валидными и невалидными данными"""
 
 
+#регистрация с валидными данными
 def test_positive_registration_true(browser):
     reg_main_page = RegistrationHelper(browser)
     data = CreatingData()
@@ -14,6 +15,7 @@ def test_positive_registration_true(browser):
     assert True
 
 
+#регистрация с невалидным паролем
 def test_negative_registration_error_true(browser):
     reg_main_page = RegistrationHelper(browser)
     data = CreatingData()

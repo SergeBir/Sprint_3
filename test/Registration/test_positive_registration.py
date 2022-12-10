@@ -1,7 +1,7 @@
 from locators.ForRegistration import TestRegistrationCheckLocators
 from pages.CreatingData import CreatingData
 
-
+#проверка регистрации с валидными данными
 def test_positive_registration_true(browser):
     reg = TestRegistrationCheckLocators(browser)
     data = CreatingData

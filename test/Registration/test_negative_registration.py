@@ -1,7 +1,7 @@
 from locators.ForRegistration import TestRegistrationCheckLocators
 from pages.CreatingData import CreatingData
 
-
+#проверка регистрация с невалидным паролем
 def test_negative_registration_get_error_true(browser):
     reg = TestRegistrationCheckLocators(browser)
     data = CreatingData

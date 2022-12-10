@@ -2,7 +2,7 @@ from selenium.webdriver.support import expected_conditions
 from selenium.webdriver.support.wait import WebDriverWait
 from locators.ForEnter import TestEnterCheckLocators
 
-
+#проверка выхода из личного кабинета
 def test_exit_from_personal_cabinet_true(browser):
     reg = TestEnterCheckLocators(browser)
     reg.go_to_site()

@@ -3,6 +3,7 @@ from selenium.webdriver.support.wait import WebDriverWait
 from locators.ForEnter import TestEnterCheckLocators
 
 
+#проверка входа из формы регистрации
 def test_enter_from_registration_true(browser):
     reg = TestEnterCheckLocators(browser)
     reg.go_to_site()

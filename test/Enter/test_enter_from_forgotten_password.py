@@ -3,6 +3,7 @@ from selenium.webdriver.support.wait import WebDriverWait
 from locators.ForEnter import TestEnterCheckLocators
 
 
+#проверка входа из формы восстановления пароля
 def test_enter_from_forgotten_password_true(browser):
     reg = TestEnterCheckLocators(browser)
     reg.go_to_site()

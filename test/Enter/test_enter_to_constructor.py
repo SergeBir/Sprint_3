@@ -2,6 +2,7 @@ from selenium.webdriver.support import expected_conditions
 from selenium.webdriver.support.wait import WebDriverWait
 from locators.ForEnter import TestEnterCheckLocators
 
+#проверка входа в конструктор
 
 def test_enter_to_constructor_true(browser):
     reg = TestEnterCheckLocators(browser)

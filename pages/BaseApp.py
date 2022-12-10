@@ -7,13 +7,18 @@ class BasePage:
         self.driver = driver
         self.base_url = "https://stellarburgers.nomoreparties.site"
 
-    def find_element(self, locator, time=5):
+    def go_to_site(self):
+        return self.driver.get(self.base_url)
+
+    def click_element(self, locator):
+        self.driver.execute_script("arguments[0].click();", locator)
+
+    def find_element(self, locator, time=10):
         return WebDriverWait(self.driver, time).until(EC.presence_of_element_located(locator),
                                                       message=f"Can't find element by locator {locator}")
 
-    def find_elements(self, locator, time=5):
-        return WebDriverWait(self.driver, time).until(EC.presence_of_all_elements_located(locator),
-                                                      message=f"Can't find elements by locator {locator}")
+    def scroll_to_element(self, locator):
+        return self.driver.execute_script("arguments[0].scrollIntoView();", locator)
 
-    def go_to_site(self):
-        return self.driver.get(self.base_url)
+
+

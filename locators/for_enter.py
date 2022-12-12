@@ -1,4 +1,4 @@
-from pages.BaseApp import BasePage
+from pages.base_app import BasePage
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
 

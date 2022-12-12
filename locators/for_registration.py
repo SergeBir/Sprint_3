@@ -1,4 +1,4 @@
-from pages.BaseApp import BasePage
+from pages.base_app import BasePage
 from selenium.webdriver.common.by import By
 
 
@@ -8,7 +8,7 @@ class TestRegistrationCheckLocators(BasePage):
     REGISTRATION_BUTTON = By.XPATH, './/a[@href = "/register"]'  # кнопка регистрации
     NAME_LINE = By.XPATH, "//fieldset[@class='Auth_fieldset__1QzWN mb-6'][1]//input"  # строка имя
     EMAIL_LINE = By.XPATH, "//fieldset[@class='Auth_fieldset__1QzWN mb-6'][2]//input"  # строла email
-    PASSWORD_LINE = By.XPATH, "//fieldset[@class='Auth_fieldset__1QzWN mb-6'][3]//input"  # строка пароль
+    PASSWORD_LINE = By.XPATH, "//input[@name='Пароль']"  # строка пароль
     BUTTON_REG = By.XPATH, './/button[text()="Зарегистрироваться"]'  # Кнопка зарегистрироваться
     ENTER_BUTTON = By.XPATH, './/button[text()="Войти"]'  # кнопка Войти
     ENTER_TEXT = By.XPATH, './/h2[text()="Вход"]'  # Надпись Вход
@@ -48,11 +48,3 @@ class TestRegistrationCheckLocators(BasePage):
     def find_text(self, locator):
         line_text = self.find_element(locator, time=3)
         return line_text
-
-
-
-
-
-
-
-

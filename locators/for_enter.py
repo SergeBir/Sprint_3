@@ -10,7 +10,7 @@ class TestEnterCheckLocators(BasePage):
     ENTER_TO_ACCOUNT_BUTTON = By.XPATH, './/button[text()="Войти в аккаунт"]' #кнопка Войти в аккаунт
     PERSONAL_CABINET_BUTTON = By.XPATH, './/a[@href="/account"]' #кнопка Личный Кабинет
     CONTAINER = By.XPATH, './/main[@class="App_componentContainer__2JC2W"]' #контейнер Личного кабинета
-    EMAIL_LINE = By.XPATH, "//fieldset[@class='Auth_fieldset__1QzWN mb-6'][1]//input"  # строла email
+    EMAIL_LINE = By.XPATH, '//fieldset[contains(@class, "Auth_fieldset")]/div/div/label[text()="Email"]/following-sibling::node()'  # строла email
     PASSWORD_LINE = By.XPATH, "//fieldset[@class='Auth_fieldset__1QzWN mb-6'][2]//input"  # строка пароль
     ENTER_BUTTON = By.XPATH, './/button[text()="Войти"]'  # кнопка Войти
     MAKE_ORDER = By.XPATH, "//button[@class='button_button__33qZ0 button_button_type_primary__1O7Bx button_button_size_large__G21Vg']" # Оформить заказ
